@@ -1,0 +1,23 @@
+{
+  "Puck": true,
+  
+  "Oberon": {
+    "Snout": true,
+    
+    "Titania": [
+      "Peaseblossom",
+      "Mustardseed",
+      "Cobweb",
+      
+      {
+        "Mote": true
+      },
+      
+      [
+        "Bottom",
+        "Flute",
+        "Peter"
+      ]
+    ]
+  }
+}

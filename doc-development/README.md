@@ -3,48 +3,19 @@
 `File.path_temp` defines a temporary file path. It does not create the file. If,
 after the do block, a file exists at that path then the file is deleted.
 
-```ruby
-#!/usr/bin/ruby -w
-require 'file/path-temp'
-
-# call File.path_temp
-File.path_temp() do |path|
-  # defines a path in current directory with a bunch of random numbers as
-  # the name e.g. ./18168068873296828
-  puts path 
-  
-  # file is *not* automatically created
-  puts File.exist?(path) # => false
-  
-  # write to the path
-  File.write path, 'whatever'
-  
-  # file now exists
-  puts File.exist?(path) # => true
-end
-
-# at this point, the file no longer exists
-```
+[import]: {"path": "basic.rb"}
 
 ## root
 
 To put the path somewhere besides the current directory, use the `root` option:
 
-```ruby
-File.path_temp('root'=>'/tmp') do |path|
-  puts path # => e,g, /tmp/458577463617317
-end
-```
+[import]: {"path": "root.rb", "range":"all"}
 
 ## extension
 
 To give the path an extension, use the `ext` option:
 
-```ruby
-File.path_temp('ext'=>'txt') do |path|
-  puts path # => e,g, ./5314921893963471.txt
-end
-```
+[import]: {"path": "extension.rb", "range":"all"}
 
 # Installation
 
